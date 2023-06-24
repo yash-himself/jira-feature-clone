@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jira clone</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav></nav>
+    <aside>
+        <a href="">SUMMARY</a><a href="vfds">BOARD</a><a href="gfnhgr">ISSUES</a><a href="gfbr">REPORT</a>
+    </aside>
+
+    <div id="task-form" class="create-form">
+        <div class="form-container">
+            <h2>Add Task</h2>
+            <span>
+                <p onclick="display()">cencel</p>
+            </span>
+            <div><input id="task" required placeholder="Task Name" type="text"></div>
+            <div><input id="description" required class="desc" placeholder="Description" type="text"></div>
+            <div><input id="asignee" required placeholder="Asignee" type="text"></div>
+            <div>
+                <select name="issue-type" id="select-todo">
+                    <option value="TO DO">TO DO</option>
+                    <option value="IN PROGRESS">IN PROGRESS</option>
+                    <option value="COMPLETED">COMPLETED</option>
+                </select>
+            </div>
+            <button id="create" type="submit" onclick="submit()">Create</button>
+        </div>
+    </div>
+
+
+
+
+    <section id="workSpace-container">
+        <div id="lanes" class="main-container">
+            <div id="to-do" class="box">
+                <div class="box-nav">
+                    <p class="title">TO DO</p><strong>...</strong>
+                </div>
+                <button id="creat-task" onclick="display()"> + CREATE ISSUE</button>
+
+                <!-- task -->
+
+            </div>
+
+
+            <div id="in-progress" class="box">
+                <div class="box-nav">
+                    <p class="title">IN PROGRESS</p><strong>...</strong>
+                </div>
+                <!-- task -->
+            </div>
+
+
+            <div id="completed" class="box COMPLETED">
+                <div class="box-nav">
+                    <p class="title">COMPLETED</p><strong>...</strong>
+                </div>
+                <!-- task -->
+            </div>
+        </div>
+    </section>
+
+
+    <script> let draggedElement = null; </script>
+    <script src="index.js"></script>
+    <script src="draggable.js"></script>
+</body>
+
+</html>
